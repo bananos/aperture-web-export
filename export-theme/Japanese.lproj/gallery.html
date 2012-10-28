@@ -1,0 +1,80 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+	<title>_PageTitle_</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="assets/css/white.css" rel="stylesheet" type="text/css" />
+	<meta name="description" localizable="true" content="Created by Apple Aperture" />
+
+</head>
+
+<body>
+<table id="page" style="width: _TableWidth_px;"><tr><td> <!-- overall page div to keep things centered and fluid width -->
+	
+		
+		<div id="header" style="width: _TableWidth_px;"> <!-- overall Header wrapper div -->
+			
+			<!-- Header Title -->
+			<h1 contenteditable="true" textid="header1" localizable="true" common="true">サイトの見出しを入力</h1>
+			<!-- end title -->
+			
+			<!-- Subtitle -->
+			<h2 contenteditable="true" textid="header2" localizable="true" common="true">小見出しを入力</h2>
+			<!-- end subtitle -->
+
+		</div> <!-- end Header wrapper -->
+		
+		<div id="navrow" style="width: _TableWidth_px;" removeonsinglepage="yes">
+		
+			<ul id="nav" rkid="navbar">
+				<li class="previous"><a href="_PreviousPageURL_" removeonfirstpage="yes"> <em class="previous_text" localizable="true">前へ</em> </a> </li><li class="pagnation" rkid="inactive"><a href="_IndexPageURL_">_PageNumber_</a></li><li class="pagnation" rkid="active">_PageNumber_</li><li class="next"> <a href="_NextPageURL_" removeonlastpage="yes"> <em class="next_text" localizable="true">次へ</em> </a></li></ul>
+
+            <div class="clear"></div>
+        </div>
+
+		
+		<div id="content" rkid="content"> <!-- Content wrapper div -->
+		
+		<!-- Title code, repeats for every title on the page -->
+			<div rkid="titleblock">
+				<h2 rkid="text" contenteditable="true" style="width: _TableWidth_px;">サブタイトルを入力</h2>
+			</div>
+			<!-- end title code -->
+			
+			<!-- Body text code, repeats for every block of text that's put on the page -->
+			<div class="journaltext" rkid="textblock" style="width: _TableWidth_px;">
+				<p rkid="text"  localizable="true" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			</div>
+			<!-- end text code -->
+
+
+			<table class="pictureblock" rkid="pictureblock"> <!-- Photo wrapper table -->
+				<tr>
+				<!-- Photo code, repeats for every image that's put on the page -->
+				<td>
+					<dl class="imageblock" style="width: _CellWidth_px;">
+						<dd class="imagecell" ><a href="_DetailPageURL_"><img src="_ThumbImageURL_" rkid="image" height="150" width="225" alt=""></a></dd>
+						<dt class="imageinfo">_PlateNameSpace_<ul id="metadata" singlenesting="yes" rkid="metadata" style="width:_ImageWidth_px;" metaseparator=" &#124; " metalayout="paragraph"><li> _metavalue_</li></ul></dt>
+					</dl>
+				</td>
+				<!-- end repeating code -->
+				
+				</tr>
+			</table> <!-- end photo wrapper table -->
+			
+		</div> <!-- end content wrapper -->
+
+	<!-- Footer div -->
+	<div id="footer" style="width: _TableWidth_px;">
+		<p class="footerCopy" contenteditable="true" textid="copyright" common="true" localizable="true">&copy; 書類のコピーライトを入力</p>
+	</div>
+	<!-- end footer div -->
+	
+	
+	</td></tr></table> <!-- end overall page div -->	
+</body>
+</html>

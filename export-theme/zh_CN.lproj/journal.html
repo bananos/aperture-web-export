@@ -1,0 +1,87 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>_PageTitle_</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="assets/css/white.css" rel="stylesheet" type="text/css" />
+	<meta name="description" localizable="true" content="使用 Apple Aperture 创建" />
+	
+</head>
+
+<body>
+<table id="journalpage"> <!-- overall page div to keep things centered and fluid width -->
+<tr><td>
+		
+		<div id="header" style="width:_TableWidth_px;"> <!-- overall Header wrapper div -->
+			
+			<!-- Header Title, Subtitle and Creator -->
+			<div id="headerinfo" style="width: 200px;">
+				<h1 contenteditable="true" textid="header1" common="true">站点标题</h1>
+				<h2 contenteditable="true" textid="header2" common="true">副标题</h2>
+			</div>
+			<!-- end page title info -->
+			
+			<!-- Header image unrelated to overall journal images -->
+			<div id="headerimage">
+				<img name="img" picturename="headerimage" placedimage="true" src="_ThumbImageURL_" width="313" height="258" alt="" />
+			</div>
+			<!-- end header image -->
+			
+			<div class="clear"></div>
+
+		</div> <!-- end overall header wrapper div -->
+		
+			<div id="navrow" style="width: _TableWidth_px;" removeonsinglepage="yes">
+		
+			<ul id="nav" rkid="navbar">
+				<li class="previous"><a href="_PreviousPageURL_" removeonfirstpage="yes"> <em class="previous_text" localizable="true">上一页</em> </a> </li><li class="pagnation" rkid="inactive"><a href="_IndexPageURL_">_PageNumber_</a></li><li class="pagnation" rkid="active">_PageNumber_</li><li class="next"> <a href="_NextPageURL_" removeonlastpage="yes"> <em class="next_text" localizable="true">下一页</em> </a></li></ul>
+
+            <div class="clear"></div>
+        </div>
+		
+		<div id="content" rkid="content"> <!-- start content wrapper div -->
+			
+			<!-- Title code, repeats for every title on the page -->
+			<div rkid="titleblock">
+				<h2 rkid="text" contenteditable="true" style="width: _TableWidth_px;">副标题</h2>
+			</div>
+			<!-- end title code -->
+			
+			<!-- Body text code, repeats for every block of text that's put on the page -->
+			<div class="journaltext" rkid="textblock" style="width: _TableWidth_px;">
+				<p rkid="text"  localizable="true" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			</div>
+			<!-- end text code -->
+
+			
+			<table class="pictureblock" rkid="pictureblock"> <!-- Photo wrapper table -->
+				<tr>
+					<!-- Photo code, repeats for every image that's put on the page -->
+					<td >						
+						<dl class="imageblock" style="width: _CellWidth_px;">
+						<dd class="imagecell" ><a href="_DetailPageURL_"><img src="_ThumbImageURL_" rkid="image" height="150" width="225" alt=""></a></dd>
+						<dt class="imageinfo">_PlateNameSpace_<ul id="metadata" singlenesting="yes" rkid="metadata" style="width:_ImageWidth_px;" metaseparator=" &#124; " metalayout="paragraph"><li> _metavalue_</li></ul></dt>
+					</dl>
+					</td>
+					<!-- end repeating photo code -->
+				</tr>
+			</table> <!-- end photo wrapper table -->
+			
+			
+		</div> <!-- end content wrapper div -->
+		
+	<!-- Footer div -->
+	<div id="footer" style="width:_TableWidth_px;">
+		<p class="footerCopy" contenteditable="true" textid="copyright" common="true" localizable="true">&copy; 此处是文稿版权</p>
+	</div>
+	<!-- end footer div -->
+
+		
+</td></tr>
+</table> <!-- end overall journalpage div -->
+</body>
+</html>

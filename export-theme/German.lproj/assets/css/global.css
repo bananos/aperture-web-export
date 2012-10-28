@@ -1,0 +1,296 @@
+/* ####### ART BOOK STYLES ####### */
+
+/* ##### STANDARD STYLES, general inheritance to other elements ##### */
+body
+{
+	font-family: Baskerville;
+	text-align: center;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+table, td
+{
+	border-width: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: top;
+}
+img { border: none; margin: 0; padding: 0;}
+
+#page
+{
+	text-align: left;
+	margin: 0px auto 0px auto;
+}
+
+
+/* ########## */
+/* ##### HEADER STYLES, default ##### */
+#header{
+	margin: 15px;
+	color:#FFF;
+	height: 60px;
+	background-color:#999;
+}
+#header h1
+{
+	font-size: 1.1em;
+	margin: 0 15px 0 15px;
+	padding: 10px 0 0 0;
+}
+#header h2
+{
+	font-size: 1.1em;
+	font-weight:normal;
+	margin: 0 15px 0 15px;
+}
+
+
+
+/* ########## */
+/* ##### HEADER NAVIGATION STYLES, controls previous & next number menu between pages ##### */
+
+#header ul#nav
+{
+	font-size: .9em;
+	float: right;
+	margin: 3px 10px 0px 0px;
+	padding: 0;
+	color: #FFF;
+	list-style: none;
+}
+#header ul#nav li 
+{
+	display: block;
+	padding: 0 0 0 5px; 
+	margin: 0;
+	float: left;
+	list-style: none;
+}
+
+#header ul#nav a, #header ul#nav a:visited, #header ul#nav a:active
+{
+	color: #ccc;
+	text-decoration: none;
+	margin:0;
+}
+#header ul#nav a:hover { color: #fff; }
+
+#header ul#nav .previous { width: 15px; white-space: pre; }
+#header ul#nav .previous a { background: url("../img/previous.gif") no-repeat center 3px; }
+#header ul#nav .previous a:hover { background: url("../img/previous_active.gif") no-repeat center 3px;}
+#header ul#nav .previous_text {display: none;}
+
+#header ul#nav .next { width: 15px; white-space: pre; }
+#header ul#nav .next a { background: url("../img/next.gif") no-repeat center 3px;}
+#header ul#nav .next a:hover { background: url("../img/next_active.gif") no-repeat center 3px;}
+#header ul#nav .next_text {display: none;}
+
+
+/* ########## */
+/* ##### CONTENT STYLES, controls overall wrapper for Photo and Text areas ##### */
+
+#content
+{
+	margin: 0 15px 15px 15px;
+	padding: 0px;
+}
+
+
+/* ##### PHOTO STYLES ##### */
+#content #photo
+{
+	margin: 0 0 15px 0;
+	background-color: #666;
+}
+
+ul#photoInfo
+{
+	list-style: none;
+	margin: 0 0 0 15px;
+	padding: 0px;
+	color: #777;
+}
+ul#photoInfo li
+{
+	width: 141px; /* default width only - must define in page based on user settings *** */
+	white-space: pre;
+	
+}
+
+
+
+dl.imageblock
+{
+	float:left;
+	margin: 0 7px 7px 0;
+}
+dl.imageblock dt.imageinfo
+{
+	margin: 0 0 9px 9px;
+	padding: 0;
+	font-size: .76em;
+	color: #666;
+}
+
+dl.imageblock dd.imagecell
+{
+	margin: 0;
+	padding: 0;
+	text-align:center;
+	background-color:#FFF;
+	margin: 0 9px 0 9px;
+}
+dl.imageblock dd.imagecell img
+{
+	background-color:#FFF;
+}
+
+.imageinfo a, .imageinfo a:visited, .imageinfo a:active, .imageinfo a:hover
+{
+	text-decoration: none;
+	color: #666;
+}
+
+
+
+/* ####################################### */
+/* ##### JOURNAL STYLES, header info ##### */
+#journalpage
+{
+	text-align: left;
+	margin: 0px auto 0px auto;
+}
+#journalpage #header{
+	margin: 15px;
+	color:#fff;
+	background-color:#fff;
+}
+#headerinfo
+{
+	background-color: #999;
+	margin: 0 15px 0 0;
+	padding: 15px;
+	clear: right;
+	float: left;
+	width: 30%;
+}
+#headerinfo h1
+{
+	font-size: 1.3em;
+	margin: 0;
+	padding: 0;
+}
+#headerinfo h2
+{
+	font-size: 1.3em;
+	font-weight:normal;
+	margin: 0 0 30px 0;
+	padding: 0;
+}
+#headerinfo h3
+{
+	font-size: .9em;
+	font-weight:normal;
+	margin: 0;
+	padding: 0;
+}
+
+#headerimage img
+{
+	background-color: #666;
+	clear: right;
+}
+
+
+/* ##### JOURNAL STYLES, navigation ##### */
+
+#journalpage #header ul#nav
+{
+	font-size: .9em;
+	margin: 3px 10px 0px 0px;
+	padding: 0;
+	color: #666;
+	list-style: none;
+}
+
+#journalpage #header ul#nav a:hover { color: #666; }
+
+#journalpage #header ul#nav .previous { white-space: pre; width: 15px;}
+#journalpage #header ul#nav .previous a { background: url("../img/previous_wht.gif") no-repeat center 3px; }
+#journalpage #header ul#nav .previous a:hover { background: url("../img/previous_wht_active.gif") no-repeat center 3px;}
+
+#journalpage #header ul#nav .next { white-space: pre; width: 15px;}
+#journalpage #header ul#nav .next a { background: url("../img/next_wht.gif") no-repeat center 3px;}
+#journalpage #header ul#nav .next a:hover { background: url("../img/next_wht_active.gif") no-repeat center 3px;}
+
+
+
+/* ##### JOURNAL STYLES, content wrapper ##### */
+#journalpage #content
+{
+	margin: 0 15px 15px 15px;
+	padding: 20px 0 0 0;
+	clear: both;
+}
+
+/* ##### JOURNAL STYLES, Titles and Text ##### */
+#journalpage #content h2
+{
+	font-size: 1.2em;
+	color: #666;
+	border-top: 0px solid #777;
+	margin: 0;
+	padding: 0;
+}
+
+
+.journaltext p
+{
+	width: 585px;
+	margin:0 0 20px 0;
+	padding:0;
+	font-size:14px;
+	color:#777;
+}
+
+
+/* ##### JOURNAL STYLES, Images ##### */
+
+#journalpage dl.imageblock dt.imageinfo
+{
+	margin: 0;
+	padding: 0;
+	font-size: .76em;
+	color: #666;
+}
+
+#journalpage dl.imageblock dd.imagecell
+{
+	margin: 0 9px 0 9px;
+	padding: 0;
+	text-align:center;
+	background-color:#FFF;
+	margin: 0;
+}
+
+
+
+/* ############ */
+/* ##### OVERALL FOOTER STYLES ##### */
+
+#footer
+{
+	margin: 15px 0 0 0;
+}
+#footer p.footerCopy
+{
+	font-size: 11px;
+	color: #777;
+	margin: 0 15px 15px 15px;
+	padding: 5px 0px 0px 0px;
+	border-top: 1px solid #777;
+}

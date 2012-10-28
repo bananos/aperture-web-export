@@ -1,0 +1,303 @@
+/* ##### ART BOOK, WHITE STYLE ##### */
+
+
+/* ##### STANDARD STYLES, general inheritance to other elements ##### */
+body
+{
+	font-family: Baskerville, Georgia, Palatino, Times, serif;
+	text-align: center;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+table, td
+{
+	border-width: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: top;
+}
+img { border: none; margin: 0; padding: 0;}
+
+#page
+{
+	text-align: left;
+	margin: 0 10px;
+}
+
+div.clear
+{
+    clear: both;
+}
+
+/* ########## */
+/* ##### HEADER STYLES, default ##### */
+#header{
+	margin: 9px 0 0 15px;
+	padding: 0 0 5px 0;
+	color:#777;
+	background-color:#FFF;
+	border-bottom: 1px solid #777;
+}
+
+
+
+h1
+{
+	font-size: 1.3em;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+h2
+{
+	font-size: 1.1em;
+	font-weight:normal;
+	margin: 0;
+	color: #666;
+}
+
+#content h2
+{
+	font-size: 1.1em;
+	font-weight:normal;
+	border-top: 1px solid #777;
+	margin: 0;
+	color: #666;
+}
+
+h3
+{
+	font-size: .9em;
+	font-weight:normal;
+	margin: 0;
+	padding: 0;
+	color: #666;
+}
+
+
+/* ########## */
+/* ##### HEADER NAVIGATION STYLES, controls previous & next number menu between pages ##### */
+
+#navrow ul#nav
+{
+	font-size: 1em;
+	margin: 3px 0px 0px 0px;
+	padding: 0;
+	color: #777;
+	list-style: none;
+	border-top: 
+}
+#navrow ul#nav li 
+{
+	display: block;
+	float: left;
+	padding: 0; 
+	margin: 0;
+	list-style: none;
+}
+
+#navrow ul#nav li.pagnation
+{
+    padding-right: 5px;
+}
+
+#navrow ul#nav a, #header ul#nav a:visited, #header ul#nav a:active
+{
+	color: #bbb;
+	text-decoration: none;
+	margin:0;
+}
+#navrow ul#nav a:hover { color: #777; }
+
+#navrow ul#nav li.index
+{
+    padding-right: 1em;
+}
+
+#navrow ul#nav .previous { width: 15px; white-space: pre; }
+#navrow ul#nav .previous a { background: url("../img/previous.gif") no-repeat left 3px; }
+#navrow ul#nav .previous a:hover { background: url("../img/previous_active.gif") no-repeat left 3px;}
+#navrow ul#nav .previous_text {display: none;}
+
+#navrow ul#nav .next { width: 15px; white-space: pre; }
+#navrow ul#nav .next a { background: url("../img/next.gif") no-repeat right 3px;}
+#navrow ul#nav .next a:hover { background: url("../img/next_active.gif") no-repeat right 3px;}
+#navrow ul#nav .next_text {display: none;}
+
+#navrow
+{
+    clear: left;
+    margin: 0 0 0 15px;
+    border-bottom: 1px solid #777;
+    margin-bottom: 5px;
+    padding: 2px 0 3px 0;
+}
+
+/* ########## */
+/* ##### CONTENT STYLES, controls overall wrapper for Photo and Text areas ##### */
+
+#content
+{
+	margin: 15px;
+	padding: 0px;
+	clear: both;
+}
+
+
+/* ##### PHOTO STYLES ##### */
+#content #photo
+{
+	margin: 0 0 15px 0;
+	background-color: #666;
+}
+
+ul#photoInfo
+{
+	list-style: none;
+	margin: 5px 0 0 0;
+	padding: 0px;
+	color: #777;
+}
+ul#photoInfo li
+{
+	width: 141px; /* default width only - must define in page based on user settings *** */
+	white-space: pre;
+
+}
+
+
+dl.imageblock
+{
+	float:left;
+	margin: 0 13px 7px 0;
+}
+dl.imageblock dt.imageinfo
+{
+	margin: 0 0 18px 0;
+	padding: 0;
+	font-size: .76em;
+	color: #000;
+	font-weight: bold;
+}
+
+ul#metadata
+{
+	margin: 0;
+	padding: 0;
+	color: #666;
+	font-weight: normal;
+}
+
+ul#metadata li
+{
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style: none;
+}
+
+dl.imageblock dd.imagecell
+{
+	margin: 0;
+	padding: 0;
+	background-color:#FFF;
+	margin: 0;
+	text-align: left;
+}
+dl.imageblock dd.imagecell img
+{
+	background-color:#666;
+}
+
+.imageinfo a, .imageinfo a:visited, .imageinfo a:active, .imageinfo a:hover
+{
+	text-decoration: none;
+	color: #666;
+}
+
+
+
+/* ####################################### */
+/* ##### JOURNAL STYLES, header info ##### */
+#journalpage
+{
+	text-align: left;
+	margin: 0 10px;
+}
+
+#headerinfo
+{
+	float: left;
+	width: 350px;
+}
+
+#headerimage
+{
+    float: right;
+}
+
+#headerimage img
+{
+	background-color: #666;
+}
+
+/* ##### JOURNAL STYLES, Titles and Text ##### */
+#journalpage #content h2
+{
+	font-size: 1.1em;
+	color: #666;
+	border-top: 1px solid #777;
+	margin: 0;
+	padding: 0;
+}
+
+
+.journaltext p
+{
+	width: 585px;
+	margin:0 0 20px 0;
+	padding:0;
+	font-size:0.9em;
+	color:#777;
+}
+
+
+/* ##### JOURNAL STYLES, Images ##### */
+
+#journalpage dl.imageblock dt.imageinfo
+{
+	margin: 0 0 18px 0;
+	padding: 0;
+	font-size: .76em;
+	color: #000;
+}
+
+#journalpage dl.imageblock dd.imagecell
+{
+	margin: 0;
+	padding: 0;
+	text-align:left;
+	background-color:#FFF;
+	margin: 0;
+}
+
+
+/* ############ */
+/* ##### OVERALL FOOTER STYLES ##### */
+
+#footer
+{
+	margin: 15px 0 0 15px;
+}
+#footer p.footerCopy
+{
+	font-size: 0.76em;
+	color: #777;
+	margin: 0 0 15px 0;
+	padding: 5px 0px 0px 0px;
+	border-top: 1px solid #777;
+}

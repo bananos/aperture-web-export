@@ -1,0 +1,60 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- ART BOOK STYLES -->
+<head>
+	<title>_PageTitle_</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="assets/css/white.css" rel="stylesheet" type="text/css" />
+	<meta name="description" localizable="true" content="使用 Apple Aperture 创建" />
+	
+</head>
+
+<body>
+<table id="page"><tr><td style="width:_CellWidth_px;"> <!-- overall page div to keep things centered and fluid width -->
+			
+		<div id="header" style="width:_CellWidth_px;"> <!-- Header div -->
+		
+			<!-- Site Title -->
+			<h1 contenteditable="true" textid="header1" localizable="true" common="true">站点标题</h1>
+			<!-- end site title -->
+			
+			<!-- Subtitle -->
+			<h2 contenteditable="true" textid="header2" localizable="true">副标题</h2>
+			<!-- end Subtitle -->
+			
+		</div> <!-- end Header div -->
+		
+		<div id="navrow" style="width:_CellWidth_px;">
+		
+			<ul id="nav" rkid="navbar">
+				<li class="index"><a href="_IndexPageURL_" localizable="true">索引</a></li><li class="previous"> <a href="_PreviousPageURL_" removeonfirstpage="yes"> <em class="previous_text" localizable="true">上一页</em> </a></li><li class="pageNumber">_PageNumber_ / _PageCount_</li><li class="next"> <a href="_NextPageURL_" removeonlastpage="yes"> <em class="next_text" localizable="true">下一页</em> </a></li></ul>
+
+			<div class="clear"></div>
+		</div>
+		
+		<div id="content" rkid="content"> <!-- Content div -->
+			
+			<div id="photo">
+				<!-- Photo code, repeats for every image that's put on the page -->
+				<table rkid="pictureblock"><tr><td>
+						<img rkid="image" src="_ThumbImageURL_" width="418" height="418" />
+						<ul id="photoInfo" singlenesting="yes" rkid="metadata"><li><strong>_metaname_:</strong> _metavalue_</li></ul>
+					</td></tr></table>
+				<!-- end Photo code -->
+			</div>
+		
+		</div> <!-- end Content div -->
+		
+		<!-- Footer div -->
+		<div id="footer" style="width:_CellWidth_px;">
+			<p class="footerCopy" contenteditable="true" textid="copyright" common="true" localizable="true">&copy; 此处是文稿版权</p>
+		</div>
+		<!-- end Footer -->
+		
+		</td></tr></table> <!-- end overall page div -->
+</body>
+</html>

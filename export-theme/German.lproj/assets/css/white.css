@@ -4,7 +4,7 @@
 /* ##### STANDARD STYLES, general inheritance to other elements ##### */
 body
 {
-	font-family: Baskerville, Georgia, Palatino, Times, serif;
+	font-family: Arial, Tahoma, Baskerville, Georgia, Palatino, Times, serif;
 	text-align: center;
 	font-size: 100%;
 	margin: 0;
@@ -37,7 +37,7 @@ div.clear
 #header{
 	margin: 9px 0 0 15px;
 	padding: 0 0 5px 0;
-	color:#777;
+	color:#000;
 	background-color:#FFF;
 	border-bottom: 1px solid #777;
 }
@@ -46,7 +46,7 @@ div.clear
 
 h1
 {
-	font-size: 1.3em;
+	font-size: 2.5em;
 	margin: 0;
 	padding: 0;
 	color: #000;
@@ -54,10 +54,10 @@ h1
 
 h2
 {
-	font-size: 1.1em;
+	font-size: 2em;
 	font-weight:normal;
 	margin: 0;
-	color: #666;
+	color: #000;
 }
 
 #content h2
@@ -66,7 +66,7 @@ h2
 	font-weight:normal;
 	border-top: 1px solid #777;
 	margin: 0;
-	color: #666;
+	color: #000;
 }
 
 h3
@@ -75,7 +75,7 @@ h3
 	font-weight:normal;
 	margin: 0;
 	padding: 0;
-	color: #666;
+	color: #000;
 }
 
 
@@ -84,10 +84,10 @@ h3
 
 #navrow ul#nav
 {
-	font-size: 1em;
+	font-size: 1.5em;
 	margin: 3px 0px 0px 0px;
 	padding: 0;
-	color: #777;
+	color: #000;
 	list-style: none;
 	border-top: 
 }
@@ -107,11 +107,11 @@ h3
 
 #navrow ul#nav a, #header ul#nav a:visited, #header ul#nav a:active
 {
-	color: #bbb;
+	color: #000;
 	text-decoration: none;
 	margin:0;
 }
-#navrow ul#nav a:hover { color: #777; }
+#navrow ul#nav a:hover { color: #000; }
 
 #navrow ul#nav li.index
 {
@@ -160,7 +160,7 @@ ul#photoInfo
 	list-style: none;
 	margin: 5px 0 0 0;
 	padding: 0px;
-	color: #777;
+	color: #000;
 }
 ul#photoInfo li
 {
@@ -179,7 +179,7 @@ dl.imageblock dt.imageinfo
 {
 	margin: 0 0 18px 0;
 	padding: 0;
-	font-size: .76em;
+	font-size: 1.0em;
 	color: #000;
 	font-weight: bold;
 }
@@ -188,7 +188,7 @@ ul#metadata
 {
 	margin: 0;
 	padding: 0;
-	color: #666;
+	color: #000;
 	font-weight: normal;
 }
 
@@ -216,7 +216,7 @@ dl.imageblock dd.imagecell img
 .imageinfo a, .imageinfo a:visited, .imageinfo a:active, .imageinfo a:hover
 {
 	text-decoration: none;
-	color: #666;
+	color: #000;
 }
 
 
@@ -248,8 +248,8 @@ dl.imageblock dd.imagecell img
 /* ##### JOURNAL STYLES, Titles and Text ##### */
 #journalpage #content h2
 {
-	font-size: 1.1em;
-	color: #666;
+	font-size: 1.5em;
+	color: #000;
 	border-top: 1px solid #777;
 	margin: 0;
 	padding: 0;
@@ -261,8 +261,8 @@ dl.imageblock dd.imagecell img
 	width: 585px;
 	margin:0 0 20px 0;
 	padding:0;
-	font-size:0.9em;
-	color:#777;
+	font-size:1.5em;
+	color:#000;
 }
 
 
@@ -272,7 +272,7 @@ dl.imageblock dd.imagecell img
 {
 	margin: 0 0 18px 0;
 	padding: 0;
-	font-size: .76em;
+	font-size: 1.5em;
 	color: #000;
 }
 
@@ -295,8 +295,8 @@ dl.imageblock dd.imagecell img
 }
 #footer p.footerCopy
 {
-	font-size: 0.76em;
-	color: #777;
+	font-size: 1.5em;
+	color: #000;
 	margin: 0 0 15px 0;
 	padding: 5px 0px 0px 0px;
 	border-top: 1px solid #777;

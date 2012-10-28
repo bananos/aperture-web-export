@@ -23,10 +23,10 @@ Installation
 We're assuming that your copy of Aperture is located at ``/Applications/Aperture.app/``:
 ```bash
 
-[bananos@amber]$ git clone git@github.com:bananos/aperture-web-export.git
-[bananos@amber]$ cd aperture-web-export
-[bananos@amber]$ sudo cp -R export-theme /Applications/Aperture.app/Contents/Resources/WebThemes/
-[bananos@amber]$ sudo chown -R root:wheel /Applications/Aperture.app/Contents/Resources/WebThemes/export-theme
+$ git clone git@github.com:bananos/aperture-web-export.git
+$ cd aperture-web-export
+$ sudo cp -R export-theme /Applications/Aperture.app/Contents/Resources/WebThemes/
+$ sudo chown -R root:wheel /Applications/Aperture.app/Contents/Resources/WebThemes/export-theme
 
 ```
 Once you've copied new theme to Aperture folder it should be available in the list of possible themes for Web Journal:
@@ -36,13 +36,13 @@ TODO: screenshot
 
 ### Step 2. Install requirements.txt for python
 
-Use pip to install python dependencies:
+Use ``pip`` to install python dependencies:
 ```bash
-[bananos@amber]$ pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
-or easy_install if you don't have pip yet:
+or ``easy_install`` if you don't have pip yet:
 ```bash
-[bananos@amber]$ while read line; do sudo easy_install $line; done < requirements.txt
+$ while read line; do sudo easy_install $line; done < requirements.txt
 ```
 
 
@@ -51,14 +51,13 @@ Usage
 In order to quickly play with script, there's a sample Aperture Web Journal in repo:
 
 ```bash
-[bananos@amber]$ chmod +x parser.py
-[bananos@amber]$ ./parser.py --path=sample-web-journal > journal.json
+$ chmod +x parser.py
+$ ./parser.py --path=sample-web-journal > journal.json
 
 ```
 
 Here's a prettified JSON output:
 ```json
-
 {
     "img1": {
         "src": "/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-1.jpg",

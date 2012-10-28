@@ -20,12 +20,12 @@
 			<key>visibleName</key>	    <string>Gallery</string>
 			<key>fileName</key>		    <string>gallery.html</string>
 			<key>constrain</key>		<integer>1</integer>
-			<key>minimumHeight</key>	<integer>80</integer>
-			<key>height</key>		    <integer>150</integer>
-			<key>maximumHeight</key>	<integer>400</integer>
-			<key>minimumWidth</key>	    <integer>80</integer>
-			<key>width</key>		    <integer>150</integer>
-			<key>maximumWidth</key>	    <integer>500</integer>
+			<key>minimumHeight</key>	<integer>675</integer>
+			<key>height</key>		    <integer>675</integer>
+			<key>maximumHeight</key>	<integer>675</integer>
+			<key>minimumWidth</key>	    <integer>800</integer>
+			<key>width</key>		    <integer>800</integer>
+			<key>maximumWidth</key>	    <integer>800</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>rightMargin</key>	    <integer>15</integer>
 			<key>columnSpacing</key>	<integer>13</integer>
@@ -48,12 +48,12 @@
 			<key>visibleName</key>	    <string>Image Header</string>
 			<key>fileName</key>		    <string>journal.html</string>
 			<key>constrain</key>		<integer>1</integer>
-			<key>minimumHeight</key>	<integer>80</integer>
+			<key>minimumHeight</key>	<integer>800</integer>
 			<key>height</key>		    <integer>150</integer>
-			<key>maximumHeight</key>	<integer>400</integer>
-			<key>minimumWidth</key>	    <integer>80</integer>
-			<key>width</key>		    <integer>150</integer>
-			<key>maximumWidth</key>	    <integer>400</integer>
+			<key>maximumHeight</key>	<integer>800</integer>
+			<key>minimumWidth</key>	    <integer>900</integer>
+			<key>width</key>		    <integer>900</integer>
+			<key>maximumWidth</key>	    <integer>900</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>rightMargin</key>	    <integer>15</integer>
 			<key>columnSpacing</key>	<integer>13</integer>
@@ -113,6 +113,7 @@
 				    <key>keys</key>	
 				    <array>
 					    <string>iptcProperties.Caption/Abstract</string>
+						<string>iptcProperties.Caption/Keywords</string>
 					    <string>exifProperties.ApertureValue</string>
 					    <string>exifProperties.ShutterSpeed</string>
 					    <string>exifProperties.ImageDate</string>

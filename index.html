@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Aperture-web-export by bananos</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Aperture-web-export</h1>
+        <p class="header">Export metadata from Aperture Web Journal</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/bananos/aperture-web-export/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/bananos/aperture-web-export/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/bananos/aperture-web-export">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/bananos">bananos</a></p>
+
+
+      </header>
+      <section>
+        <h1>Aperture web export</h1>
+
+<p>Export meta-data in JSON from Aperture Web Journals.</p>
+
+<h2>Purpose &amp; original idea</h2>
+
+<p><a href="http://www.apple.com/aperture/">Apple Aperture</a> is a pretty powerful piece of software, which perfectly met my requirements for keeping track 
+large amounts of photos. It's also good at advanced image processing and has some additional features like
+photobooks creation, web journals/pages, etc. </p>
+
+<p>The original idea was to be able to write posts for my photo-blog right inside Aperture using its built-in functionality 
+for creating webjournals. However, I'm not satisfied with the final result -- none of default web themes fits my custom blog design.
+Therefore, I decided to create a simple tool to extract metadata out of Aperture Web Journal into general-purpose JSON to 
+be able to use it elsewhere.</p>
+
+<h2>Installation</h2>
+
+<h3>Step 1. Install additional Aperture Web Journal theme</h3>
+
+<p>We're assuming that your copy of Aperture is located at <code>/Applications/Aperture.app/</code>:</p>
+
+<div class="highlight"><pre>
+<span class="nv">$ </span>git clone git@github.com:bananos/aperture-web-export.git
+<span class="nv">$ </span><span class="nb">cd </span>aperture-web-export
+<span class="nv">$ </span>sudo cp -R <span class="nb">export</span>-theme /Applications/Aperture.app/Contents/Resources/WebThemes/
+<span class="nv">$ </span>sudo chown -R root:wheel /Applications/Aperture.app/Contents/Resources/WebThemes/export-theme
+
+</pre></div>
+
+<p>Once you've copied new theme to Aperture folder it should be available in the list of possible themes for Web Journal:</p>
+
+<p>TODO: screenshot</p>
+
+<h3>Step 2. Install requirements.txt for python</h3>
+
+<p>Use <code>pip</code> to install python dependencies:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>pip install -r requirements.txt
+</pre></div>
+
+<p>or <code>easy_install</code> if you don't have pip yet:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span><span class="k">while </span><span class="nb">read </span>line; <span class="k">do </span>sudo easy_install <span class="nv">$line</span>; <span class="k">done</span> &lt; requirements.txt
+</pre></div>
+
+<h2>Usage</h2>
+
+<p>In order to quickly play with script, there's a sample Aperture Web Journal in repo:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>chmod +x parser.py
+<span class="nv">$ </span>./parser.py --path<span class="o">=</span>sample-web-journal &gt; journal.json
+
+</pre></div>
+
+<p>Here's a prettified JSON output:</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">"img1"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"src"</span><span class="p">:</span> <span class="s2">"/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-1.jpg"</span><span class="p">,</span>
+        <span class="nt">"direction"</span><span class="p">:</span> <span class="s2">"88.637634"</span><span class="p">,</span>
+        <span class="nt">"width"</span><span class="p">:</span> <span class="s2">"1000"</span><span class="p">,</span>
+        <span class="nt">"altitude"</span><span class="p">:</span> <span class="s2">"173"</span><span class="p">,</span>
+        <span class="nt">"longitude"</span><span class="p">:</span> <span class="s2">"30.565333"</span><span class="p">,</span>
+        <span class="nt">"height"</span><span class="p">:</span> <span class="s2">"746"</span><span class="p">,</span>
+        <span class="nt">"caption"</span><span class="p">:</span> <span class="s2">"IMG_0711"</span><span class="p">,</span>
+        <span class="nt">"keywords"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">"alt"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="nt">"latitude"</span><span class="p">:</span> <span class="s2">"50.435667"</span>
+    <span class="p">},</span>
+    <span class="nt">"p1"</span><span class="p">:</span> <span class="s2">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."</span><span class="p">,</span>
+    <span class="nt">"p2"</span><span class="p">:</span> <span class="s2">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."</span><span class="p">,</span>
+    <span class="nt">"img2"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"src"</span><span class="p">:</span> <span class="s2">"/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-2.jpg"</span><span class="p">,</span>
+        <span class="nt">"direction"</span><span class="p">:</span> <span class="s2">"266.124847"</span><span class="p">,</span>
+        <span class="nt">"width"</span><span class="p">:</span> <span class="s2">"1000"</span><span class="p">,</span>
+        <span class="nt">"altitude"</span><span class="p">:</span> <span class="s2">"173"</span><span class="p">,</span>
+        <span class="nt">"longitude"</span><span class="p">:</span> <span class="s2">"30.562833"</span><span class="p">,</span>
+        <span class="nt">"height"</span><span class="p">:</span> <span class="s2">"746"</span><span class="p">,</span>
+        <span class="nt">"caption"</span><span class="p">:</span> <span class="s2">"IMG_0721"</span><span class="p">,</span>
+        <span class="nt">"keywords"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">"alt"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="nt">"latitude"</span><span class="p">:</span> <span class="s2">"50.4355"</span>
+    <span class="p">},</span>
+    <span class="nt">"img3"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"src"</span><span class="p">:</span> <span class="s2">"/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-3.jpg"</span><span class="p">,</span>
+        <span class="nt">"direction"</span><span class="p">:</span> <span class="s2">"330.919464"</span><span class="p">,</span>
+        <span class="nt">"width"</span><span class="p">:</span> <span class="s2">"1000"</span><span class="p">,</span>
+        <span class="nt">"altitude"</span><span class="p">:</span> <span class="s2">"182"</span><span class="p">,</span>
+        <span class="nt">"longitude"</span><span class="p">:</span> <span class="s2">"30.553167"</span><span class="p">,</span>
+        <span class="nt">"height"</span><span class="p">:</span> <span class="s2">"746"</span><span class="p">,</span>
+        <span class="nt">"caption"</span><span class="p">:</span> <span class="s2">"IMG_0734"</span><span class="p">,</span>
+        <span class="nt">"keywords"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">"alt"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="nt">"latitude"</span><span class="p">:</span> <span class="s2">"50.435"</span>
+    <span class="p">},</span>
+    <span class="nt">"p3"</span><span class="p">:</span> <span class="s2">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."</span><span class="p">,</span>
+    <span class="nt">"p4"</span><span class="p">:</span> <span class="s2">"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."</span><span class="p">,</span>
+    <span class="nt">"img4"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"src"</span><span class="p">:</span> <span class="s2">"/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-4.jpg"</span><span class="p">,</span>
+        <span class="nt">"direction"</span><span class="p">:</span> <span class="s2">"174.497879"</span><span class="p">,</span>
+        <span class="nt">"width"</span><span class="p">:</span> <span class="s2">"1000"</span><span class="p">,</span>
+        <span class="nt">"altitude"</span><span class="p">:</span> <span class="s2">"173"</span><span class="p">,</span>
+        <span class="nt">"longitude"</span><span class="p">:</span> <span class="s2">"30.561"</span><span class="p">,</span>
+        <span class="nt">"height"</span><span class="p">:</span> <span class="s2">"1338"</span><span class="p">,</span>
+        <span class="nt">"caption"</span><span class="p">:</span> <span class="s2">"IMG_0716"</span><span class="p">,</span>
+        <span class="nt">"keywords"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">"alt"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="nt">"latitude"</span><span class="p">:</span> <span class="s2">"50.4355"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</pre></div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>

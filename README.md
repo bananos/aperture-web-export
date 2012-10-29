@@ -31,8 +31,7 @@ $ sudo chown -R root:wheel /Applications/Aperture.app/Contents/Resources/WebThem
 ```
 Once you've copied new theme to Aperture folder it should be available in the list of possible themes for Web Journal:
 
-TODO: screenshot
-
+![Aperture Web Journal](http://bananos.github.com/aperture-web-export/resources/aperture-export.png)
 
 ### Step 2. Install requirements.txt for python
 
@@ -61,55 +60,47 @@ Here's a prettified JSON output:
 {
     "img1": {
         "src": "/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-1.jpg",
-        "direction": "88.637634",
-        "width": "1000",
-        "altitude": "173",
-        "longitude": "30.565333",
-        "height": "746",
-        "caption": "IMG_0711",
-        "keywords": null,
-        "alt": "",
-        "latitude": "50.435667"
-    },
-    "p1": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-    "p2": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-    "img2": {
-        "src": "/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-2.jpg",
-        "direction": "266.124847",
-        "width": "1000",
+        "latitude": "50.4355",
         "altitude": "173",
         "longitude": "30.562833",
-        "height": "746",
-        "caption": "IMG_0721",
-        "keywords": null,
+        "height": "672",
+        "width": "900",
+        "shutter speed": "1/15",
+        "date": "6/10/12 6:44:30 PM GMT+03:00",
         "alt": "",
-        "latitude": "50.4355"
+        "caption": "Second caption",
+        "aperture": "2.8"
     },
+    "p1": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+    "img2": {
+        "src": "/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-2.jpg",
+        "date": "6/10/12 7:05:37 PM GMT+03:00",
+        "altitude": "166",
+        "longitude": "30.552667",
+        "height": "900",
+        "width": "672",
+        "shutter speed": "1/30",
+        "latitude": "50.434167",
+        "alt": "",
+        "aperture": "2.8"
+    },
+    "p2": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     "img3": {
         "src": "/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-3.jpg",
-        "direction": "330.919464",
-        "width": "1000",
-        "altitude": "182",
-        "longitude": "30.553167",
-        "height": "746",
-        "caption": "IMG_0734",
-        "keywords": null,
-        "alt": "",
-        "latitude": "50.435"
-    },
-    "p3": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-    "p4": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-    "img4": {
-        "src": "/Users/bananos/Projects/aperture-web-export/sample-web-journal/thumbnails/thumb-4.jpg",
-        "direction": "174.497879",
-        "width": "1000",
+        "latitude": "50.4355",
         "altitude": "173",
         "longitude": "30.561",
-        "height": "1338",
-        "caption": "IMG_0716",
-        "keywords": null,
+        "height": "900",
+        "width": "672",
+        "shutter speed": "1/17",
+        "keywords": [
+            "arsenale",
+            "test"
+        ],
+        "date": "6/10/12 6:28:02 PM GMT+03:00",
         "alt": "",
-        "latitude": "50.4355"
+        "caption": "My caption",
+        "aperture": "2.8"
     }
 }
 

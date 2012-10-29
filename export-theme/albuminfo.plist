@@ -20,12 +20,12 @@
 			<key>visibleName</key>	    <string>Gallery</string>
 			<key>fileName</key>		    <string>gallery.html</string>
 			<key>constrain</key>		<integer>1</integer>
-			<key>minimumHeight</key>	<integer>675</integer>
-			<key>height</key>		    <integer>675</integer>
-			<key>maximumHeight</key>	<integer>675</integer>
-			<key>minimumWidth</key>	    <integer>800</integer>
-			<key>width</key>		    <integer>800</integer>
-			<key>maximumWidth</key>	    <integer>800</integer>
+			<key>width</key>		    <integer>900</integer>
+			<key>minimumWidth</key>	    <integer>900</integer>
+			<key>maximumWidth</key>	    <integer>900</integer>
+			<key>height</key>		    <integer>800</integer>
+			<key>minimumHeight</key>	<integer>800</integer>
+			<key>maximumHeight</key>	<integer>800</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>rightMargin</key>	    <integer>15</integer>
 			<key>columnSpacing</key>	<integer>13</integer>
@@ -48,12 +48,12 @@
 			<key>visibleName</key>	    <string>Image Header</string>
 			<key>fileName</key>		    <string>journal.html</string>
 			<key>constrain</key>		<integer>1</integer>
-			<key>minimumHeight</key>	<integer>800</integer>
-			<key>height</key>		    <integer>150</integer>
-			<key>maximumHeight</key>	<integer>800</integer>
-			<key>minimumWidth</key>	    <integer>900</integer>
 			<key>width</key>		    <integer>900</integer>
+			<key>minimumWidth</key>	    <integer>900</integer>
 			<key>maximumWidth</key>	    <integer>900</integer>
+			<key>height</key>		    <integer>800</integer>
+			<key>minimumHeight</key>	<integer>800</integer>
+			<key>maximumHeight</key>	<integer>800</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>rightMargin</key>	    <integer>15</integer>
 			<key>columnSpacing</key>	<integer>13</integer>
@@ -74,12 +74,12 @@
 			<key>visibleName</key>	    <string>Text Header</string>
 			<key>fileName</key>		    <string>gallery.html</string>
 			<key>constrain</key>		<integer>1</integer>
-			<key>minimumHeight</key>	<integer>80</integer>
-			<key>height</key>		    <integer>150</integer>
-			<key>maximumHeight</key>	<integer>400</integer>
-			<key>minimumWidth</key>	    <integer>80</integer>
-			<key>width</key>		    <integer>150</integer>
-			<key>maximumWidth</key>	    <integer>400</integer>
+			<key>width</key>		    <integer>900</integer>
+			<key>minimumWidth</key>	    <integer>900</integer>
+			<key>maximumWidth</key>	    <integer>900</integer>
+			<key>height</key>		    <integer>800</integer>
+			<key>minimumHeight</key>	<integer>800</integer>
+			<key>maximumHeight</key>	<integer>800</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>rightMargin</key>	    <integer>15</integer>
@@ -99,12 +99,12 @@
 		<dict>
 			<key>visibleName</key>	    <string>Detail</string>
 			<key>fileName</key>		    <string>detail.html</string>
-			<key>constrain</key>		<integer>0</integer>
-			<key>width</key>		    <integer>1000</integer>
-			<key>minimumWidth</key>	    <integer>320</integer>
-			<key>maximumWidth</key>	    <integer>1200</integer>
-			<key>height</key>		    <integer>750</integer>
-			<key>minimumHeight</key>	<integer>320</integer>
+			<key>constrain</key>		<integer>1</integer>
+			<key>width</key>		    <integer>900</integer>
+			<key>minimumWidth</key>	    <integer>900</integer>
+			<key>maximumWidth</key>	    <integer>900</integer>
+			<key>height</key>		    <integer>800</integer>
+			<key>minimumHeight</key>	<integer>800</integer>
 			<key>maximumHeight</key>	<integer>800</integer>
 			<key>plateMetadata</key>	<integer>0</integer>
 			<key>metadataSetDefault</key>	
@@ -113,13 +113,14 @@
 				    <key>keys</key>	
 				    <array>
 					    <string>iptcProperties.Caption/Abstract</string>
-						<string>iptcProperties.Caption/Keywords</string>
+					    <string>iptcProperties.Keywords</string>
 					    <string>exifProperties.ApertureValue</string>
 					    <string>exifProperties.ShutterSpeed</string>
 					    <string>exifProperties.ImageDate</string>
 					    <string>exifProperties.Altitude</string>
-   						<string>exifProperties.Latitude</string>
-   						<string>exifProperties.Longitude</string>
+   					    <string>exifProperties.Latitude</string>
+   					    <string>exifProperties.Longitude</string>
+					    <string>exifProperties.Direction</string>
 				    </array>
 			    </dict>
 			<key>maxNavItems</key>	    <integer>11</integer>

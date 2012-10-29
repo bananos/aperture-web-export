@@ -18,8 +18,10 @@ from bs4 import BeautifulSoup
 from collections import OrderedDict
 from copy import deepcopy
 
-decimal_check = re.compile('^[0-9]+')
-float_check = re.compile('^[0-9]+\.[0-9]+')
+decimal_check = re.compile('^\d+')
+float_check = re.compile('^\d+\.\d+')
+float_check_end = re.compile('\d+\.\d+$')
+
 
 def parse_index(path):
     """
@@ -42,13 +44,10 @@ def parse_index(path):
             key = "img%i" % img_count
             res[key] = img.attrs
 
-            dt = filter(lambda t: str(t).find("dt")>=0,  tag.next_siblings)[0]
-            lis = filter(lambda t: str(t).find("li")>=0, dt.ul.contents)
-
-            res[key]["caption"] = unicode(lis[0].string).strip()
-            res[key]["keywords"] = unicode(lis[1].string).strip().split(", ") if len(lis) > 1 else None
-
-
+#            dt = filter(lambda t: str(t).find("dt")>=0,  tag.next_siblings)[0]
+#            lis = filter(lambda t: str(t).find("li")>=0, dt.ul.contents)
+#            res[key]["caption"] = unicode(lis[0].string).strip()
+#            res[key]["keywords"] = unicode(lis[1].string).strip().split(", ") if len(lis) > 1 else None
 
         if tag.name == "p" and tag.get("localizable", None) == "true" and tag.get("class", [None,])[0] != "footerCopy":
             p_count+=1
@@ -68,6 +67,7 @@ def parse_details(data, path):
 
     for k,v in res.iteritems():
         if k.startswith("img"):
+            # extract detailed data from large-%.html pages
             idx  = int(k.replace("img", ""))
             soup = BeautifulSoup(open("%s/large-%i.html" % (path, idx)))
             inf = soup.find(id="photoInfo")
@@ -77,7 +77,7 @@ def parse_details(data, path):
                 kk.strong.unwrap()
                 attr_name = kk.contents[0].strip().replace(":", "").lower()
                 attr_value =  kk.contents[1].strip()
-                new_attrs[attr_name] = filter_gps_attributes(attr_name, attr_value)
+                new_attrs[attr_name] = filter_attributes(attr_name, attr_value)
 
             # update image attributes
             res[k].update(new_attrs)
@@ -86,7 +86,7 @@ def parse_details(data, path):
     return res
 
 
-def filter_gps_attributes(name, value):
+def filter_attributes(name, value):
     """
     Does some cleanup for GPS related attributes.
     :param name: Attribute name
@@ -95,10 +95,17 @@ def filter_gps_attributes(name, value):
     :type value: unicode
     """
 
-    if name=="altitude":
+    if name == "altitude":
         return decimal_check.match(value).group()
+
     if name in ("direction", "longitude", "latitude"):
         return float_check.match(value).group()
+
+    if name == "keywords":
+        return value.strip().split(", ")
+
+    if name == "aperture":
+        return float_check_end.search(value).group()
 
     return value
 
@@ -111,6 +118,8 @@ def main():
     parser = argparse.ArgumentParser(description='Aperture Web Journal parser')
     parser.add_argument('-v', '--verbose')
     parser.add_argument('--path', default=None, type=unicode, nargs=1, help="Full path to Aperture Web Journal folder")
+    parser.add_argument('--pretty', default=False, type=bool, nargs=1, help="Prettify JSON output (True/False)")
+
     args = parser.parse_args()
 
     if args.path is None:
@@ -126,8 +135,10 @@ def main():
     res = parse_index(path)
     res = parse_details(res, path)
 
-    print simplejson.dumps(res, indent=4)
-
+    if args.pretty:
+        print simplejson.dumps(res, indent=4)
+    else:
+        print simplejson.dumps(res)
     return 0
 
 

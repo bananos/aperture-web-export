@@ -105,7 +105,8 @@ def filter_attributes(name, value):
         return value.strip().split(", ")
 
     if name == "aperture":
-        return float_check_end.search(value).group()
+        res = float_check_end.search(value)
+        return res.group() if res is not None else value
 
     return value
 

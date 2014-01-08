@@ -22,9 +22,9 @@
 			<key>constrain</key>		<integer>1</integer>
 			<key>width</key>		    <integer>900</integer>
 			<key>minimumWidth</key>	    <integer>900</integer>
-			<key>maximumWidth</key>	    <integer>900</integer>
-			<key>height</key>		    <integer>800</integer>
-			<key>minimumHeight</key>	<integer>800</integer>
+			<key>maximumWidth</key>	    <integer>9000</integer>
+			<key>height</key>		    <integer>600</integer>
+			<key>minimumHeight</key>	<integer>600</integer>
 			<key>maximumHeight</key>	<integer>800</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>rightMargin</key>	    <integer>15</integer>
@@ -50,9 +50,9 @@
 			<key>constrain</key>		<integer>1</integer>
 			<key>width</key>		    <integer>900</integer>
 			<key>minimumWidth</key>	    <integer>900</integer>
-			<key>maximumWidth</key>	    <integer>900</integer>
-			<key>height</key>		    <integer>800</integer>
-			<key>minimumHeight</key>	<integer>800</integer>
+			<key>maximumWidth</key>	    <integer>9000</integer>
+			<key>height</key>		    <integer>600</integer>
+			<key>minimumHeight</key>	<integer>600</integer>
 			<key>maximumHeight</key>	<integer>800</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>rightMargin</key>	    <integer>15</integer>
@@ -76,9 +76,9 @@
 			<key>constrain</key>		<integer>1</integer>
 			<key>width</key>		    <integer>900</integer>
 			<key>minimumWidth</key>	    <integer>900</integer>
-			<key>maximumWidth</key>	    <integer>900</integer>
-			<key>height</key>		    <integer>800</integer>
-			<key>minimumHeight</key>	<integer>800</integer>
+			<key>maximumWidth</key>	    <integer>9000</integer>
+			<key>height</key>		    <integer>600</integer>
+			<key>minimumHeight</key>	<integer>600</integer>
 			<key>maximumHeight</key>	<integer>800</integer>
 			<key>leftMargin</key>		<integer>15</integer>
 			<key>leftMargin</key>		<integer>15</integer>
@@ -102,9 +102,9 @@
 			<key>constrain</key>		<integer>1</integer>
 			<key>width</key>		    <integer>900</integer>
 			<key>minimumWidth</key>	    <integer>900</integer>
-			<key>maximumWidth</key>	    <integer>900</integer>
-			<key>height</key>		    <integer>800</integer>
-			<key>minimumHeight</key>	<integer>800</integer>
+			<key>maximumWidth</key>	    <integer>9000</integer>
+			<key>height</key>		    <integer>600</integer>
+			<key>minimumHeight</key>	<integer>600</integer>
 			<key>maximumHeight</key>	<integer>800</integer>
 			<key>plateMetadata</key>	<integer>0</integer>
 			<key>metadataSetDefault</key>	

@@ -117,7 +117,7 @@ def main():
     """
 
     parser = argparse.ArgumentParser(description='Aperture Web Journal parser')
-    parser.add_argument('-v', '--verbose')
+    #parser.add_argument('-v', '--verbose')
     parser.add_argument('--path', default=None, type=unicode, nargs=1, help="Full path to Aperture Web Journal folder")
     parser.add_argument('--pretty', default=False, type=bool, nargs=1, help="Prettify JSON output (True/False)")
 
@@ -136,10 +136,15 @@ def main():
     res = parse_index(path)
     res = parse_details(res, path)
 
+    # convert to list because we want to preserve order
+    o_list = []
+    for k,v in res.items():
+        o_list.append({k:v})
+
     if args.pretty:
-        print simplejson.dumps(res, indent=4)
+        print simplejson.dumps(o_list, indent=4)
     else:
-        print simplejson.dumps(res)
+        print simplejson.dumps(o_list)
     return 0
 
 
